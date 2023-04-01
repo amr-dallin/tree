@@ -1,0 +1,847 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2018-04-29 18:12+0500\n"
+"Last-Translator: Marat Dallin <amr.dallin@gmail.com>\n"
+"Language-Team: EMAIL@ADDRESS\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: Controller/AlbumsController.php:36;92;134
+msgid "Invalid album"
+msgstr "Недопустимый альбом"
+
+#: Controller/AlbumsController.php:62;102
+msgid "The album has been saved."
+msgstr "Альбом был сохранен."
+
+#: Controller/AlbumsController.php:72;110
+msgid "The album could not be saved. Please, try again."
+msgstr "Альбом не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/AlbumsController.php:139
+msgid "The album has been deleted."
+msgstr "Альбом удален."
+
+#: Controller/AlbumsController.php:144
+msgid "The album could not be deleted. Please, try again."
+msgstr "Альбом нельзя удалить. Пожалуйста, попробуйте еще раз."
+
+#: Controller/BookmarksController.php:51 Controller/ItemsController.php:363
+msgid "Something went wrong. Please, repeat again."
+msgstr "Что-то пошло не так. Повторите еще раз."
+
+#: Controller/BookmarksController.php:74
+msgid "Mediafile added to bookmarks"
+msgstr "Медиафайл добавлен в закладки"
+
+#: Controller/BookmarksController.php:75 View/Helper/ItemHelper.php:311;618
+msgid "Remove from bookmarks"
+msgstr "Удалить из закладок"
+
+#: Controller/BookmarksController.php:91
+msgid "Mediafile removed from bookmarks"
+msgstr "Медиафайл удален из закладок"
+
+#: Controller/BookmarksController.php:92 View/Helper/ItemHelper.php:308;614
+msgid "Add to bookmarks"
+msgstr "Добавить в закладки"
+
+#: Controller/ItemsController.php:88;136;192;296;322;329
+msgid "Invalid item"
+msgstr "Недопустимый элемент"
+
+#: Controller/ItemsController.php:206
+msgid "The item has been saved."
+msgstr "Медиафайл был сохранен."
+
+#: Controller/ItemsController.php:213
+msgid "The item could not be saved. Please, try again."
+msgstr "Медиафайл не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/ItemsController.php:231
+msgid "Can not exclude media file from album. Please, try again."
+msgstr ""
+"Невозможно исключить медиафайл из альбома. Пожалуйста, попробуйте еще раз."
+
+#: Controller/ItemsController.php:250
+msgid "Media file excluded from album."
+msgstr "Медиафайл исключен из альбома."
+
+#: Controller/ItemsController.php:301;344
+msgid "Media file verified."
+msgstr "Медиафайл подтверждён."
+
+#: Controller/ItemsController.php:303;346
+msgid "Media file not verified. Please, try again."
+msgstr "Медиафайл не подтверждён. Пожалуйста, попробуйте еще раз."
+
+#: Controller/ItemsController.php:409
+msgid "Mediafile deleted."
+msgstr "Медиафайл удален."
+
+#: Controller/MarksController.php:28
+#: Controller/PeopleController.php:64;89;141;219;284
+msgid "Invalid person"
+msgstr "Недоступные персональные данные"
+
+#: Controller/PeopleController.php:104;174;225
+msgid "The person has been saved."
+msgstr "Персональные данные были сохранены."
+
+#: Controller/PeopleController.php:110;180;231
+msgid "The person could not be saved. Please, try again."
+msgstr "Персональные данные не были сохранены. Пожалуйста, повторите снова."
+
+#: Controller/PeopleController.php:288
+msgid "The person has been deleted."
+msgstr "Персональные данные удалены."
+
+#: Controller/PeopleController.php:290
+msgid "The person could not be deleted. Please, try again."
+msgstr "Персональные данные не удалены. Пожалуйста, повторите снова."
+
+#: Controller/UsersController.php:82
+msgid "Your username or password was incorrect."
+msgstr "Неверное имя пользователя или пароль."
+
+#: Controller/UsersController.php:88
+msgid "Must correctly complete the highlighted fields"
+msgstr "Необходимо правильно заполнить выделенные поля"
+
+#: Controller/UsersController.php:121
+msgid "Could not sign in by direct link. It may be damaged. Use the login page"
+msgstr ""
+"Не удалось войти по прямой ссылке. Она может быть повреждена. Используйте "
+"страницу входа на сайт"
+
+#: Controller/UsersController.php:184;327
+msgid "Account settings changed."
+msgstr "Настройки учетной записи изменены."
+
+#: Controller/UsersController.php:193;333
+msgid "Account settings are not changed. Please, repeat again."
+msgstr "Настройки учетной записи не изменены. Пожалуйста, повторите еще раз."
+
+#: Controller/UsersController.php:247
+msgid "The user has been saved."
+msgstr "Пользователь был сохранен."
+
+#: Controller/UsersController.php:253
+msgid "The user could not be saved. Please, try again."
+msgstr "Пользователь не может быть сохранен. Пожалуйста, попробуйте еще раз."
+
+#: Controller/UsersController.php:301;367
+msgid "Invalid user"
+msgstr "Недействительный пользователь"
+
+#: Model/Person.php:27
+msgid "You must enter a last name"
+msgstr "Вы должны ввести фамилию"
+
+#: Model/Person.php:35
+msgid "You must enter a first name"
+msgstr "Вы должны ввести имя"
+
+#: Model/Person.php:43
+msgid "Gender must be specified"
+msgstr "Пол должен быть указан"
+
+#: Model/Person.php:51
+msgid "Incorrect date of birth"
+msgstr "Некорректная дата рождения"
+
+#: Model/User.php:24
+msgid "The number of characters must be in the range of 5 to 20"
+msgstr "Количество символов должно быть в диапазоне от 5 до 20"
+
+#: Model/User.php:31
+msgid ""
+"It is necessary to use only Latin letters, numbers, dot and underscore "
+"characters"
+msgstr ""
+"Необходимо использовать только латинские буквы, цифры, точки и символы "
+"подчеркивания"
+
+#: Model/User.php:38;46
+msgid "Username already in use"
+msgstr "Имя пользователя уже используется"
+
+#: Model/User.php:55
+msgid "Email address not valid"
+msgstr "Адрес электронной почты недействителен"
+
+#: Model/User.php:62;70
+msgid "Email already in use"
+msgstr "Этот электронный адрес уже занят"
+
+#: Model/User.php:79;87
+msgid "The number of characters must be in the range of 6 to 20"
+msgstr "Количество символов должно быть в диапазоне от 6 до 20"
+
+#: Model/User.php:95;102
+msgid "Use latin letters, numbers and underscores"
+msgstr "Используйте латинские буквы, цифры и знаки подчёркивания"
+
+#: Model/User.php:109;116
+msgid "Re-entered password does not match"
+msgstr "Повторно введенный пароль не корректный"
+
+#: View/Albums/admin_add.ctp:3
+msgid "Add album"
+msgstr "Добавить альбом"
+
+#: View/Albums/admin_add.ctp:29 View/Albums/admin_edit.ctp:35
+msgid "Album Title"
+msgstr "Заголовок альбома"
+
+#: View/Albums/admin_add.ctp:39 View/Albums/admin_edit.ctp:45
+msgid "Album Description"
+msgstr "Описание альбома"
+
+#: View/Albums/admin_add.ctp:51 View/Albums/admin_edit.ctp:57
+#: View/Items/admin_edit.ctp:161
+msgid "From"
+msgstr "От"
+
+#: View/Albums/admin_add.ctp:60 View/Albums/admin_edit.ctp:66
+#: View/Items/admin_edit.ctp:170
+msgid "To"
+msgstr "До"
+
+#: View/Albums/admin_add.ctp:69 View/Elements/admin_nav.ctp:144;150
+msgid "Create Album"
+msgstr "Создать альбом"
+
+#: View/Albums/admin_add.ctp:88 View/Albums/admin_edit.ctp:94
+msgid "No media files to add to album."
+msgstr "Нет медиафайлов для добавления в альбом."
+
+#: View/Albums/admin_edit.ctp:3
+msgid "Edit album %s"
+msgstr "Редактировать альбом %s"
+
+#: View/Albums/admin_edit.ctp:75 View/Items/admin_edit.ctp:176
+#: View/Items/view.ctp:187 View/People/admin_edit.ctp:3;190
+#: View/People/edit.ctp:3;175 View/Users/admin_edit.ctp:157
+#: View/Users/edit.ctp:136
+msgid "Edit"
+msgstr "Редактировать"
+
+#: View/Albums/view.ctp:28
+msgid "Are you sure you want to exclude a media file from the album?"
+msgstr "Вы уверены, что хотите исключить из альбома медиафайл?"
+
+#: View/Albums/view.ctp:62
+msgid "Edit Album"
+msgstr "Редактировать альбом"
+
+#: View/Albums/view.ctp:79
+msgid "Delete Album"
+msgstr "Удалить альбом"
+
+#: View/Albums/view.ctp:81
+msgid "Are you sure you want to delete the album?"
+msgstr "Вы действительно хотите удалить альбом?"
+
+#: View/Albums/view.ctp:103 View/Helper/ItemHelper.php:401
+msgid "%s Mediafiles"
+msgstr "%s Медиафайлы"
+
+#: View/Albums/view.ctp:125
+msgid "Album description is empty."
+msgstr "Нет описания альбома."
+
+#: View/Albums/view.ctp:140
+msgid "There are no media files in the album"
+msgstr "В альбоме нет медиафайлов"
+
+#: View/Bookmarks/index.ctp:3 View/Elements/nav.ctp:117;123
+#: View/Elements/navigation.ctp:44 View/Items/view.ctp:271
+msgid "Bookmarks"
+msgstr "Закладки"
+
+#: View/Bookmarks/index.ctp:28 View/Items/admin_index.ctp:45
+msgid "Are you sure you want to remove the media file from the bookmarks?"
+msgstr "Вы действительно хотите удалить медиафайл из закладок?"
+
+#: View/Bookmarks/index.ctp:46
+msgid "No media files in bookmarks"
+msgstr "Нет медиафайлов в закладках"
+
+#: View/Comments/admin_index.ctp:3 View/Elements/admin_nav.ctp:55;61
+#: View/Items/view.ctp:267
+msgid "Comments"
+msgstr "Комментарии"
+
+#: View/Elements/admin_nav.ctp:22 View/Elements/nav.ctp:146;152
+#: View/Pages/admin_dashboard.ctp:3
+msgid "Control Panel"
+msgstr "Панель управления"
+
+#: View/Elements/admin_nav.ctp:40;46
+msgid "Back to site"
+msgstr "Назад на сайт"
+
+#: View/Elements/admin_nav.ctp:67 View/Elements/media.ctp:36
+#: View/Elements/nav.ctp:42;48
+msgid "Mediafiles"
+msgstr "Медиафайлы"
+
+#: View/Elements/admin_nav.ctp:73;80
+msgid "New"
+msgstr "Новый"
+
+#: View/Elements/admin_nav.ctp:87;94
+msgid "Not Published"
+msgstr "Не опубликовано"
+
+#: View/Elements/admin_nav.ctp:101;108 View/Items/view.ctp:282
+msgid "Published"
+msgstr "Опубликованный"
+
+#: View/Elements/admin_nav.ctp:115;122
+msgid "Without Album"
+msgstr "Без альбома"
+
+#: View/Elements/admin_nav.ctp:129;136
+msgid "Without Description"
+msgstr "Без описания"
+
+#: View/Elements/admin_nav.ctp:159 View/People/admin_index.ctp:3;35
+#: View/People/index.ctp:3
+msgid "People"
+msgstr "Люди"
+
+#: View/Elements/admin_nav.ctp:165;171
+msgid "Add person"
+msgstr "Добавить персональные данные"
+
+#: View/Elements/admin_nav.ctp:178;184
+msgid "All people"
+msgstr "Все персональные данные"
+
+#: View/Elements/admin_nav.ctp:193 View/People/admin_index.ctp:46
+#: View/Users/admin_index.ctp:38
+msgid "Users"
+msgstr "Пользователи"
+
+#: View/Elements/admin_nav.ctp:199;205 View/People/admin_index.ctp:76
+#: View/Users/admin_add.ctp:3;58
+msgid "Add an account"
+msgstr "Добавить учётную запись"
+
+#: View/Elements/admin_nav.ctp:212;218 View/Users/admin_index.ctp:3
+msgid "All users"
+msgstr "Все учётные записи"
+
+#: View/Elements/admin_nav.ctp:228;234 View/Elements/nav.ctp:160;166
+#: View/Elements/navigation.ctp:60 View/Pages/admin_settings.ctp:3
+#: View/Users/edit.ctp:3
+msgid "Settings"
+msgstr "Настройки"
+
+#: View/Elements/admin_nav.ctp:242;248 View/Elements/nav.ctp:173;179
+msgid "Logout"
+msgstr "Выйти"
+
+#: View/Elements/media.ctp:12
+msgid "Albums"
+msgstr "Альбомы"
+
+#: View/Elements/media.ctp:19
+msgid "Create album"
+msgstr "Создать альбом"
+
+#: View/Elements/nav.ctp:22 View/Elements/nav_login.ctp:16
+#: View/Elements/navigation.ctp:20 View/Elements/navigation_person.ctp:28
+#: View/People/family.ctp:3
+msgid "Family"
+msgstr "Семья"
+
+#: View/Elements/nav.ctp:55;61
+msgid "Tree"
+msgstr "Дерево"
+
+#: View/Elements/nav.ctp:71;78 View/Pages/about.ctp:3
+msgid "About the project"
+msgstr "О Проекте"
+
+#: View/Elements/nav.ctp:86;92 View/Pages/idea.ctp:3
+msgid "Idea"
+msgstr "Идея"
+
+#: View/Elements/nav.ctp:104;110 View/Elements/navigation.ctp:36
+msgid "I was tagged"
+msgstr "Я был отмечен(а)"
+
+#: View/Elements/nav.ctp:130;136 View/Elements/navigation.ctp:52
+#: View/Items/uploads.ctp:3
+msgid "Uploads"
+msgstr "Загрузки"
+
+#: View/Elements/navigation.ctp:28
+msgid "About me"
+msgstr "Обо мне"
+
+#: View/Elements/navigation_person.ctp:20 View/People/admin_add.ctp:182
+#: View/People/admin_edit.ctp:185 View/People/edit.ctp:170
+msgid "Biography"
+msgstr "Биография"
+
+#: View/Elements/navigation_person.ctp:36
+msgid "Marked on media files"
+msgstr "Отмечен(а) на медиафайлах"
+
+#: View/Elements/person_header.ctp:16
+msgid "Birthday %s"
+msgstr "День рождения %s"
+
+#: View/Errors/error400.ctp:31
+msgid "Go to home page"
+msgstr "Вернуться на главную страницу"
+
+#: View/Helper/AppHelper.php:122
+msgid "I"
+msgstr "Я"
+
+#: View/Helper/AppHelper.php:157 View/Marks/index.ctp:3
+#: View/People/admin_index.ctp:45
+msgid "Marks"
+msgstr "Отметки"
+
+#: View/Helper/ItemHelper.php:25 View/Items/index.ctp:3
+msgid "Media files"
+msgstr "Медиафайлы"
+
+#: View/Helper/ItemHelper.php:28
+msgid "Unverified media files"
+msgstr "Непроверенные медиафайлы"
+
+#: View/Helper/ItemHelper.php:31
+msgid "Not published media files"
+msgstr "Нет опубликованных медиафайлов"
+
+#: View/Helper/ItemHelper.php:34
+msgid "Published media files"
+msgstr "Опубликованные медиафайлы"
+
+#: View/Helper/ItemHelper.php:70;79
+msgid "Album: %s"
+msgstr "Альбом: %s"
+
+#: View/Helper/ItemHelper.php:90
+msgid "Date of issue: not earlier than %s"
+msgstr "Дата съёмки: не ранее %s"
+
+#: View/Helper/ItemHelper.php:96
+msgid "Date of issue: not later than %s"
+msgstr "Дата съёмки: не позднее %s"
+
+#: View/Helper/ItemHelper.php:102
+msgid "Date of issue: between %s and %s"
+msgstr "Дата съёмки: между %s и %s"
+
+#: View/Helper/ItemHelper.php:116
+msgid ""
+"There are no descriptions for this media file yet. But you can contribute to "
+"the story."
+msgstr ""
+"Пока нет описания этого медиафайла. Но вы можете внести свой вклад в историю."
+
+#: View/Helper/ItemHelper.php:155;166
+msgid "Verified"
+msgstr "Проверенный"
+
+#: View/Helper/ItemHelper.php:165
+msgid "Is the media check complete?"
+msgstr "Проверка медиафайлов завершена?"
+
+#: View/Helper/ItemHelper.php:181
+msgid "Remove"
+msgstr "Удалить"
+
+#: View/Helper/ItemHelper.php:184
+msgid "Remove from publication"
+msgstr "Удалить из публикаций"
+
+#: View/Helper/ItemHelper.php:186
+msgid "Are you sure you want to remove the media from the publication?"
+msgstr "Вы уверены что хотите снять медиафайл с публикации?"
+
+#: View/Helper/ItemHelper.php:193;196
+msgid "Publish"
+msgstr "Опубликовать"
+
+#: View/Helper/ItemHelper.php:198
+msgid "Are you sure you want to publish the media?"
+msgstr "Вы уверены что хотите опубликовать медиафайл?"
+
+#: View/Helper/ItemHelper.php:206;217
+msgid "Delete"
+msgstr "Удалить"
+
+#: View/Helper/ItemHelper.php:238
+msgid "No content"
+msgstr "Нет контента"
+
+#: View/Helper/ItemHelper.php:392
+msgid "Show all %s albums"
+msgstr "Показать все %s альбома(ов)"
+
+#: View/Helper/ItemHelper.php:453;496
+msgid "Back to media"
+msgstr "Назад к медиафайлам"
+
+#: View/Helper/ItemHelper.php:485
+msgid "Back to album"
+msgstr "Вернуться к альбому"
+
+#: View/Helper/ItemHelper.php:508
+msgid "Back to bookmarks"
+msgstr "Вернуться к закладкам"
+
+#: View/Helper/ItemHelper.php:518
+msgid "Back to marks"
+msgstr "Вернуться к отметкам"
+
+#: View/Helper/ItemHelper.php:529
+msgid "Back to uploads"
+msgstr "Вернуться к загрузкам"
+
+#: View/Helper/ItemHelper.php:539
+msgid "Back to new media"
+msgstr "Назад к новым медиафайлам"
+
+#: View/Helper/ItemHelper.php:550
+msgid "Back to unpublished media"
+msgstr "Назад к неопубликованным медиафайлам"
+
+#: View/Helper/ItemHelper.php:561
+msgid "Back to published media"
+msgstr "Назад к опубликованным медиафайлам"
+
+#: View/Helper/ItemHelper.php:572
+msgid "Back to media without albums"
+msgstr "Назад к медиафайлам без альбомов"
+
+#: View/Helper/ItemHelper.php:583
+msgid "Back to media without description"
+msgstr "Назад к медиафайлам без описания"
+
+#: View/Helper/ItemHelper.php:686
+msgid "in"
+msgstr "в"
+
+#: View/Helper/ItemHelper.php:693
+msgid "Reply"
+msgstr "Ответить"
+
+#: View/Items/admin_edit.ctp:3
+msgid "Edit media"
+msgstr "Редактировать медиафайл"
+
+#: View/Items/admin_edit.ctp:34
+msgid "Select an album for the media"
+msgstr "Выберите альбом для медиафайла"
+
+#: View/Items/admin_edit.ctp:49
+msgid "Status"
+msgstr "Статус"
+
+#: View/Items/admin_edit.ctp:84 View/Items/view.ctp:207
+msgid "Marked on media file:"
+msgstr "Отмечены на медиафайле:"
+
+#: View/Items/admin_edit.ctp:116
+msgid "Media Title"
+msgstr "Заголовок"
+
+#: View/Items/admin_edit.ctp:126
+msgid "Media Description"
+msgstr "Описание"
+
+#: View/Items/admin_edit.ctp:135
+msgid "Position"
+msgstr "Позиция"
+
+#: View/Items/admin_edit.ctp:144
+msgid "Album of a media"
+msgstr "Альбом"
+
+#: View/Items/admin_index.ctp:4
+msgid "Unverified media"
+msgstr "Непроверенные медиафайлы"
+
+#: View/Items/admin_index.ctp:8
+msgid "Not published media"
+msgstr "Нет опубликованных медиафайлов"
+
+#: View/Items/admin_index.ctp:12
+msgid "Published media"
+msgstr "Опубликованные медиафайлы"
+
+#: View/Items/admin_index.ctp:16
+msgid "Media without album"
+msgstr "Медиафайлы без альбомов"
+
+#: View/Items/admin_index.ctp:20
+msgid "Media without description"
+msgstr "Медиафайлы без описания"
+
+#: View/Items/admin_index.ctp:68 View/Items/index.ctp:84
+msgid "Media files not found"
+msgstr "Медиафайл не найден"
+
+#: View/Items/index.ctp:37
+msgid ""
+"Are you sure you want to delete the media file? After deletion, restoration "
+"is impossible."
+msgstr ""
+"Вы действительно хотите удалить медиафайл? После удаления восстановление "
+"невозможно."
+
+#: View/Items/uploads.ctp:27
+msgid "No uploaded media. At the moment, this function is not available."
+msgstr "Нет загруженных медиафайлов. В данный момент, эта функция не доступна."
+
+#: View/Items/view.ctp:3
+msgid "Mediafile"
+msgstr "Медиафайл"
+
+#: View/Items/view.ctp:98;125
+msgid "Comment added successfully"
+msgstr "Комментарий добавлен успешно"
+
+#: View/Items/view.ctp:100
+msgid "Comment not added. Please, try again."
+msgstr "Комментарий не добавлен. Пожалуйста, попробуйте еще раз."
+
+#: View/Items/view.ctp:275
+msgid "Views"
+msgstr "Просмотров"
+
+#: View/Items/view.ctp:284
+msgid "%s in %s"
+msgstr "%s в %s"
+
+#: View/Items/view.ctp:323;336
+msgid "Add comment"
+msgstr "Добавить комментарий"
+
+#: View/Items/view.ctp:341
+msgid ""
+"There are no comments yet. If you have something to share for this event, "
+"please."
+msgstr ""
+"Пока нет комментариев. Если у вас есть что рассказать, непременно поделитесь "
+"=)"
+
+#: View/Marks/index.ctp:53
+msgid "No media on which you are marked."
+msgstr "Нет медиафайлов на которых вы присутствуете."
+
+#: View/Pages/display.ctp:24 View/Users/login.ctp:4;55
+msgid "Log In"
+msgstr "Войти"
+
+#: View/Pages/func.ctp:3
+msgid "Website functionality"
+msgstr "Функционал сайта"
+
+#: View/Pages/tech.ctp:3
+msgid "Technical characteristics of the site"
+msgstr "Технические характеристики сайта"
+
+#: View/People/admin_add.ctp:3;50
+msgid "Add Person"
+msgstr "Добавить человека"
+
+#: View/People/admin_add.ctp:24;100;103 View/People/admin_edit.ctp:24;103;106
+msgid "Select Father"
+msgstr "Выберите отца"
+
+#: View/People/admin_add.ctp:30;115;118 View/People/admin_edit.ctp:30;118;121
+msgid "Select Mother"
+msgstr "Выберите мать"
+
+#: View/People/admin_add.ctp:36;130;133 View/People/admin_edit.ctp:36;133;136
+msgid "Select Spouse"
+msgstr "Выберите супруга"
+
+#: View/People/admin_add.ctp:65 View/People/admin_edit.ctp:68
+#: View/People/edit.ctp:79
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: View/People/admin_add.ctp:76 View/People/admin_edit.ctp:79
+#: View/People/edit.ctp:94
+msgid "First Name"
+msgstr "Имя"
+
+#: View/People/admin_add.ctp:87 View/People/admin_edit.ctp:90
+#: View/People/edit.ctp:109
+msgid "Second Name"
+msgstr "Отчество"
+
+#: View/People/admin_add.ctp:149 View/People/admin_edit.ctp:152
+msgid "Birthday(yyyy-mm-dd)"
+msgstr "Дата рождения (yyyy-mm-dd)"
+
+#: View/People/admin_add.ctp:158 View/People/admin_edit.ctp:161
+#: View/People/admin_index.ctp:58 View/People/edit.ctp:142
+msgid "Male"
+msgstr "Мужчина"
+
+#: View/People/admin_add.ctp:159 View/People/admin_edit.ctp:162
+#: View/People/admin_index.ctp:61 View/People/edit.ctp:143
+msgid "Female"
+msgstr "Женщина"
+
+#: View/People/admin_add.ctp:187 View/Users/admin_add.ctp:161
+msgid "Add"
+msgstr "Добавить"
+
+#: View/People/admin_index.ctp:42
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: View/People/admin_index.ctp:43
+msgid "Gender"
+msgstr "Пол"
+
+#: View/People/admin_index.ctp:44 View/People/edit.ctp:129
+msgid "Birthday"
+msgstr "Дата рождения"
+
+#: View/People/view.ctp:51
+msgid "Biography is empty"
+msgstr "Биография не заполнена"
+
+#: View/Users/admin_add.ctp:29 View/Users/admin_edit.ctp:24
+msgid "Select user personal information"
+msgstr "Выберите персональную информацию пользователя"
+
+#: View/Users/admin_add.ctp:73 View/Users/admin_edit.ctp:70
+#: View/Users/admin_index.ctp:45 View/Users/edit.ctp:64
+#: View/Users/login.ctp:34;35;46
+msgid "Username"
+msgstr "Username"
+
+#: View/Users/admin_add.ctp:87 View/Users/admin_edit.ctp:84
+#: View/Users/admin_index.ctp:46
+msgid "Person"
+msgstr "Человек"
+
+#: View/Users/admin_add.ctp:109 View/Users/admin_edit.ctp:105
+msgid "Passowrd"
+msgstr "Пароль"
+
+#: View/Users/admin_add.ctp:123;126 View/Users/admin_edit.ctp:119;122
+#: View/Users/edit.ctp:97;100
+msgid "Confirm Password"
+msgstr "Подтвердить пароль"
+
+#: View/Users/admin_add.ctp:142 View/Users/admin_edit.ctp:138
+#: View/Users/edit.ctp:117
+msgid "Full name"
+msgstr "Полное имя"
+
+#: View/Users/admin_add.ctp:156 View/Users/admin_edit.ctp:152
+#: View/Users/admin_index.ctp:47 View/Users/edit.ctp:131
+msgid "Email"
+msgstr "Почта"
+
+#: View/Users/admin_edit.ctp:3;52
+msgid "Edit an account @%s"
+msgstr "Редактировать учётную запись @%s"
+
+#: View/Users/admin_index.ctp:48
+msgid "Visited"
+msgstr "Посещение"
+
+#: View/Users/admin_index.ctp:49
+msgid "Data"
+msgstr "Данные"
+
+#: View/Users/admin_index.ctp:66
+msgid "Copy!"
+msgstr "Копировать!"
+
+#: View/Users/edit.ctp:80;83
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: View/Users/login.ctp:12
+msgid "Log In to continue"
+msgstr "Войти для продолжения"
+
+#: View/Users/login.ctp:47
+msgid "Password"
+msgstr "Пароль"
+
+#: Model/Album.php:validation for field title Model/Comment.php:validation body
+#: Model/Group.php:validation Model/Item.php:validation thumbs_75x75;validation
+#: thumbs_150x150 Model/Photo.php:validation path
+msgid "notBlank"
+msgstr ""
+
+#: Model/Bookmark.php:validation for field user_id;validation item_id
+#: Model/Comment.php:validation item_id;validation lft;validation rght
+#: Model/Item.php:validation type;validation orientation
+#: Model/Mark.php:validation Model/Photo.php:validation scale;validation
+#: width;validation height;validation size
+msgid "numeric"
+msgstr ""
+
+#: Model/Comment.php:validation for field block Model/Item.php:validation
+#: verification;validation publish Model/Mark.php:validation confirm
+msgid "boolean"
+msgstr ""
+
+#: Model/Mark.php:validation for field leftTopX;validation leftTopY;validation
+#: rightBottomX;validation rightBottomY
+msgid "decimal"
+msgstr ""
+
+#~ msgid "Could not remove media file from bookmarks. Please, try again."
+#~ msgstr ""
+#~ "Не удалось удалить медиафайл из закладок. Пожалуйста, попробуйте еще раз."
+
+#~ msgid "The media file from the bookmarks has been successfully deleted"
+#~ msgstr "Медиафайл из закладок был успешно удален"
+
+#, fuzzy
+#~ msgid "comments"
+#~ msgstr "Комментарии"
+
+#, fuzzy
+#~ msgid "bookmarks"
+#~ msgstr "Закладки"
+
+#~ msgid "Invalid photo"
+#~ msgstr "Недоступная фотография"
+
+#~ msgid "The photo has been saved."
+#~ msgstr "Фотография сохранена."
+
+#~ msgid "The photo could not be saved. Please, try again."
+#~ msgstr "Фотография не может быть сохранена. Пожалуйста, попробуйте еще раз."
+
+#~ msgid "The photo has been deleted."
+#~ msgstr "Фотография была удалена."
+
+#~ msgid "The photo could not be deleted. Please, try again."
+#~ msgstr "Фотография не может быть удалена. Пожалуйста, попробуйте еще раз."
+
+#~ msgid "Log in"
+#~ msgstr "Войти"
