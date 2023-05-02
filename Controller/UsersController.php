@@ -12,10 +12,9 @@ class UsersController extends AppController
     public function beforeFilter()
     {
         parent::beforeFilter();
-        $this->Auth->allow('login', 'direct'/* , 'initDB'*/);
+        $this->Auth->allow('login', 'direct', 'initDB');
     }
-    
-    /*
+
     public function initDB()
     {
         $group = $this->User->Group;
@@ -59,7 +58,6 @@ class UsersController extends AppController
         echo "all done";
         exit;
     }
-    */
     
     public function login()
     {   

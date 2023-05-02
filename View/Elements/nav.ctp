@@ -65,34 +65,6 @@
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="<?php if (isset($menu[4])) echo 'active'; ?>">
-                <?php
-                echo $this->Html->link(
-                    __('About the project'),
-                    array(
-                        'controller' => 'pages',
-                        'action' => 'about',
-                        'admin' => false
-                    ),
-                    array(
-                        'title' => __('About the project')
-                    )
-                );
-                ?>
-                </li>
-                <li class="<?php if (isset($menu[5])) echo 'active'; ?>">
-                <?php
-                echo $this->Html->link(
-                    __('Idea'),
-                    array(
-                        'controller' => 'pages',
-                        'action' => 'idea',
-                        'admin' => false
-                    ),
-                    array('title' => __('Idea'))
-                );
-                ?>
-                </li>
                 <li class="dropdown <?php if (isset($menu[3])) echo 'active'; ?>">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                     <?php echo $this->Session->read('Auth.User.User.username'); ?> <span class="caret"></span>

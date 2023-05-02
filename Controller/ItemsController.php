@@ -1,6 +1,8 @@
 <?php
 App::uses('AppController', 'Controller');
 
+use \Gumlet\ImageResize;
+
 /**
  * Items Controller
  *
@@ -144,9 +146,102 @@ class ItemsController extends AppController
         return $this->response;
     }
 
+    public function admin_add()
+    {
+        if ($this->request->is(array('post'))) {
+
+            $inputPath = $this->request->data['Item']['file']['tmp_name'];
+            $this->request->data['Item']['user_id'] = AuthComponent::user('User.id');
+            $this->request->data['Item']['type'] = 1;
+            //$this->request->data['Item']['verification'] = 1;
+            //$this->request->data['Item']['verified'] = date('Y-m-d H:i:s');
+            //$this->request->data['Item']['publish'] = 1;
+            //$this->request->data['Item']['published'] = date('Y-m-d H:i:s');
+            
+            $width = getimagesize($inputPath)[0];
+            $height = getimagesize($inputPath)[1];
+            $this->request->data['Item']['orientation'] = $this->orientation($width, $height);
+            
+            $image = new ImageResize($inputPath);
+            
+            // Миниатюра для коллекций на странице items/view
+            $thumbs_50x50_path = $this->outputPath($file);
+            $image->crop(50, 50);
+            if ($image->save(ITEMS . DS . $thumbs_50x50_path)) {
+                $this->request->data['Item']['thumbs_50x50'] = $thumbs_50x50_path;
+            }
+            
+            // Обложка для альбома
+            $thumbs_263x180_path = $this->outputPath($file);
+            $image->crop(263, 180);
+            if ($image->save(ITEMS . DS . $thumbs_263x180_path)) {
+                $this->request->data['Item']['thumbs_263x180'] = $thumbs_263x180_path;
+            }
+            
+            // Оригинал изображения. То что скачивается
+            $original_path = $this->outputPath($file);
+            $image->resize($width, $height);
+            if ($image->save(ITEMS . DS . $original_path)) {
+                $this->request->data['Item']['Photo'][] = array(
+                    'path' => $original_path,
+                    'scale' => 1,
+                    'width' => $width,
+                    'height' => $height,
+                    'size' => filesize(ITEMS . DS . $original_path)
+                );
+            }
+            
+            // Изображение с высотой 200px. Показывается в rowGrids
+            $height_200_path = $this->outputPath($file);
+            $image->resizeToHeight(200);
+            if ($image->save(ITEMS . DS . $height_200_path)) {
+                $this->request->data['Item']['Photo'][] = array(
+                    'path' => $height_200_path,
+                    'scale' => 2,
+                    'width' => getimagesize(ITEMS . DS . $height_200_path)[0],
+                    'height' => 200,
+                    'size' => filesize(ITEMS . DS . $height_200_path)
+                );
+            }
+            
+            // Изображение с высотой 400px. Показывается на странице view
+            $height_400_path = $this->outputPath($file);
+            $image->resizeToHeight(400);
+            if ($image->save(ITEMS . DS . $height_400_path)) {
+                $this->request->data['Item']['Photo'][] = array(
+                    'path' => $height_400_path,
+                    'scale' => 3,
+                    'width' => getimagesize(ITEMS . DS . $height_400_path)[0],
+                    'height' => 400,
+                    'size' => filesize(ITEMS . DS . $height_400_path)
+                );
+            }
+
+            $this->Item->create();
+            if ($this->Item->saveAssociated($this->request->data, array('deep' => true))) {
+                $this->Flash->set(
+                    __('The item has been saved.'), 
+                    array('params' => array('type' => 'success'))
+                );
+                
+                return $this->redirect($this->redirectEditUrl());
+            }
+            $this->Flash->set(
+                __('The item could not be saved. Please, try again.'), 
+                array('params' => array('type' => 'error'))
+            );
+        } else {
+            $this->request->data['Item'] = $item['Item'];
+        }
+        
+        $albums = $this->Item->Album->find('list');
+        
+        $this->set(compact('item', 'albums'));
+    }
+
     public function admin_index()
     {
-        if (!isset($this->params['param'])) {
+        if (!isset($this->params['pass'][0])) {
             $this->redirect(array(
                 'action' => 'index',
                 'param' => 'published',
@@ -157,12 +252,12 @@ class ItemsController extends AppController
         $this->Item->collectionSession();
         
         $items = array();
-        switch($this->params['param']) {
+        switch($this->params['pass'][0]) {
             case 'new':
                 $items = $this->Item->getItemsNew();
                 break;
-            case 'not_publish':
-                $items = $this->Item->getItemNotPublished();
+            case 'not_published':
+                $items = $this->Item->getItemsNotPublished();
                 break;
             case 'published':
                 $items = $this->Item->getItemsPublished();
@@ -196,12 +291,7 @@ class ItemsController extends AppController
         
         if ($this->request->is(array('post', 'put'))) {
             $this->Item->create();
-            if ($this->Item->save($this->request->data, array(
-                'fieldList' => array(
-                    'id', 'album_id', 'title', 'description', 
-                    'start_year', 'end_year', 'position'
-                )
-            ))) {
+            if ($this->Item->save($this->request->data)) {
                 $this->Flash->set(
                     __('The item has been saved.'), 
                     array('params' => array('type' => 'success'))
@@ -265,14 +355,15 @@ class ItemsController extends AppController
 
         if ($this->Session->check('Collection')) {
             $collection_session = $this->Session->read('Collection');
-            if ($collection_session['params']['controller'] == 'items' &&
+            if (
+                $collection_session['params']['controller'] == 'items' &&
                 $collection_session['params']['action'] == 'admin_index'
             ) {
                 $url = array(
                     'controller' => 'items',
                     'action' => 'index',
                     'admin' => true,
-                    'param' => $collection_session['params']['param']
+                    $collection_session['params']['pass'][0]
                 );
             }
         }
@@ -413,5 +504,60 @@ class ItemsController extends AppController
         
         $this->set('response', $response);
         $this->set('_serialize', 'response');
+    }
+
+    private function outputPath($file)
+    {
+        $dirPath = $this->dirPath();
+        $dir = new Folder(ITEMS . DS . $dirPath);
+        if (is_null($dir->path)) {
+            $dir->create(ITEMS . DS . $dirPath);
+        }
+        
+        return $dirPath . DS . $this->fileName($file);
+    }
+    
+    /*
+    Генерация директорий, с указанием глубины
+    */
+    private function dirPath()
+    {
+        $dir = '';
+        $dir_separator = DS;
+        for ($i = 1; $i <= DEPTH; $i++)
+        {
+            if ($i == DEPTH) {
+                $dir_separator = '';
+            }
+            $dir .= substr(md5(microtime()), mt_rand(0, 30), 2) . $dir_separator;
+        }
+        
+        return $dir;
+    }
+    
+    /*
+    Генерация имени файла
+    */
+    private function fileName($file)
+    {
+        return md5($file . substr(md5(microtime()), mt_rand(0, 30), 5)) . '.jpg';
+    }
+    
+    /**
+     * Определение ориентации изображения
+     * @param type $file
+     * 
+     */
+    private function orientation($width, $height)
+    {   
+        if ($width > $height) {
+            $orientation = 1; //горизонтальное
+        } elseif ($width < $height) {
+            $orientation = 2; //вертикальное
+        } else {
+            $orientation = 3; //квадратное
+        }
+        
+        return $orientation;
     }
 }

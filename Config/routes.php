@@ -55,12 +55,6 @@
         array('controller' => 'pages', 'action' => 'settings', 'admin' => true)
     );
 
-    Router::connect(
-        '/admin/items/:param',
-        array('controller' => 'items', 'action' => 'index', 'admin' => true),
-        array('param' => 'new|not_published|published|without_album|without_description')
-    );
-
     Router::parseExtensions();
     Router::setExtensions(array('json', 'xml', 'rss', 'pdf'));
 /**

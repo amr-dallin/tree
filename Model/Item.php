@@ -185,7 +185,7 @@ class Item extends AppModel
         
         return $this->data;
     }
-    
+
     private function limit()
     {
         $limit = LIMIT;
@@ -302,13 +302,19 @@ class Item extends AppModel
     
     public function getItemsNotPublished($offset = false)
     {
-        $conditions = array('Item.publish' => false);
+        $conditions = array(
+            'Item.verification' => true,
+            'Item.publish' => false
+        );
         return $this->getItems($conditions, $offset);
     }
     
     public function getItemsPublished($offset = false)
     {
-        $conditions = array('Item.publish' => true);
+        $conditions = array(
+            'Item.verification' => true,
+            'Item.publish' => true
+        );
         return $this->getItems($conditions, $offset);
     }
     

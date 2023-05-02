@@ -1,24 +1,24 @@
 <?php
-switch($this->params['param']) {
+switch($this->params['pass'][0]) {
     case 'new':
         $title = __('Unverified media');
-        $menu[1][0] = true;
+        $menu[1][1] = true;
         break;
     case 'not_published':
         $title = __('Not published media');
-        $menu[1][1] = true;
+        $menu[1][2] = true;
         break;
     case 'published':
         $title = __('Published media');
-        $menu[1][2] = true;
+        $menu[1][3] = true;
         break;
     case 'without_album':
         $title = __('Media without album');
-        $menu[1][3] = true;
+        $menu[1][4] = true;
         break;
     case 'without_description':
         $title = __('Media without description');
-        $menu[1][4] = true;
+        $menu[1][5] = true;
         break;
 }
 $this->start('title');

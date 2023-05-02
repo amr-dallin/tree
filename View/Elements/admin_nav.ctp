@@ -68,69 +68,83 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li class="<?php if (isset($menu[1][0])) echo 'active'; ?>">
+                            <?php
+                            echo $this->Html->link(
+                                __('Add photo(s)'), 
+                                array(
+                                    'controller' => 'items', 
+                                    'action' => 'add',
+                                    'admin' => true
+                                ),
+                                array('title' => __('Add photo(s)'))
+                            );
+                            ?>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li class="<?php if (isset($menu[1][1])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('New'), 
                             array(
                                 'controller' => 'items', 
                                 'action' => 'index', 
-                                'param' => 'new', 
+                                'new',
                                 'admin' => true
                             ),
                             array('title' => __('New'))
                         );
                         ?>
                         </li>
-                        <li class="<?php if (isset($menu[1][1])) echo 'active'; ?>">
+                        <li class="<?php if (isset($menu[1][2])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('Not Published'), 
                             array(
                                 'controller' => 'items', 
                                 'action' => 'index', 
-                                'param' => 'not_published', 
+                                'not_published',
                                 'admin' => true
                             ),
                             array('title' => __('Not Published'))
                         );
                         ?>
                         </li>
-                        <li class="<?php if (isset($menu[1][2])) echo 'active'; ?>">
+                        <li class="<?php if (isset($menu[1][3])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('Published'), 
                             array(
                                 'controller' => 'items', 
                                 'action' => 'index', 
-                                'param' => 'published', 
+                                'published', 
                                 'admin' => true
                             ),
                             array('title' => __('Published'))
                         );
                         ?>
                         </li>
-                        <li class="<?php if (isset($menu[1][3])) echo 'active'; ?>">
+                        <li class="<?php if (isset($menu[1][4])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('Without Album'), 
                             array(
                                 'controller' => 'items', 
                                 'action' => 'index', 
-                                'param' => 'without_album', 
+                                'without_album', 
                                 'admin' => true
                             ),
                             array('title' => __('Without Album'))
                         );
                         ?>
                         </li>
-                        <li class="<?php if (isset($menu[1][4])) echo 'active'; ?>">
+                        <li class="<?php if (isset($menu[1][5])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('Without Description'), 
                             array(
                                 'controller' => 'items', 
                                 'action' => 'index', 
-                                'param' => 'without_description', 
+                                'without_description', 
                                 'admin' => true
                             ),
                             array('title' => __('Without Description'))
@@ -138,7 +152,7 @@
                         ?>
                         </li>
                         <li role="separator" class="divider"></li>
-                        <li class="<?php if (isset($menu[1][5])) echo 'active'; ?>">
+                        <li class="<?php if (isset($menu[1][6])) echo 'active'; ?>">
                         <?php
                         echo $this->Html->link(
                             __('Create Album'), 

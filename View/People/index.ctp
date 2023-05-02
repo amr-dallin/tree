@@ -22,8 +22,8 @@ $this->start('jinclude');
 echo $this->Html->script(
     array(
         'jquery-ui-1.10.2.custom.min',
-        '../lib/primitives/js/primitives.latest',
-        '../lib/primitives/js/bporgeditor.latest'
+        '../lib/primitives-5.9.1/min/primitives.min',
+        '../lib/primitives-5.9.1/min/primitives.jquery.min'
     )
 );
 $this->end();
@@ -38,14 +38,14 @@ $this->end();
         
         var options = new primitives.famdiagram.Config();
 
-        var items = <?php echo $this->Html->people($people); ?>;
+        var items = <?= $this->Html->people($people) ?>;
         
         var templates = [];
         templates.push(getContactTemplate());
 
         options.items = items;
         options.defaultTemplateName = "contactTemplate";
-        options.cursorItem = '<?php echo $this->Session->read('Auth.User.User.person_id'); ?>';
+        options.cursorItem = '<?= $this->Session->read('Auth.User.User.person_id') ?>';
         options.linesWidth = 1;
         options.arrowsDirection = 2;
         options.templates = templates;
@@ -63,6 +63,8 @@ $this->end();
         options.enablePanning = true;
 
         $("#tree").famDiagram(options);
+
+        $('[name="scrollPanel"]').css({overflow: "hidden"});
         
         $(window).resize(function () {
             onWindowResize();
@@ -121,8 +123,8 @@ $this->end();
         }
 
         function ResizePlaceholder() {
-            var bodyWidth = $(window).width() - 30
-            var bodyHeight = $(window).height() - 60
+            var bodyWidth = $(window).width() - 30;
+            var bodyHeight = $(window).height() - 60;
             $("#tree").css(
             {
                 "width": bodyWidth + "px",

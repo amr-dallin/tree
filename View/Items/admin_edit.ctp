@@ -7,8 +7,6 @@ $this->start('nav');
 echo $this->element('admin_nav');
 $this->end();
 
-
-
 $this->start('jinclude');
 echo $this->Html->script(array(
     'select2/select2.min',
@@ -127,16 +125,6 @@ $this->end();
                             ));
                         
                         echo $this->Form->input(
-                            'position',
-                            array(
-                                'div' => array('class' => 'form-group'),
-                                'label' => array('class' => 'sr-only'),
-                                'class' => 'form-control',
-                                'placeholder' => __('Position')
-                            )
-                        );
-                        
-                        echo $this->Form->input(
                             'album_id', array(
                                 'type' => 'select',
                                 'div' => array('class' => 'form-group'),
@@ -170,6 +158,33 @@ $this->end();
                                         'placeholder' => __('To')
                                     ));
                                 ?>
+                            </div>
+
+                            <hr/>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <?php
+                                    echo $this->Form->input('verification', array(
+                                        'type' => 'checkbox',
+                                        'label' => false,
+                                        'before' => '<label class="checkbox-inline">',
+                                        'separator' => '</label><label class="checkbox-inline">',
+                                        'after' => __('Verification') . '</label>'
+                                    ));
+                                    ?>
+                                </div>
+                                <div class="col-xs-6">
+                                    <?php
+                                    echo $this->Form->input('publish', array(
+                                        'type' => 'checkbox',
+                                        'label' => false,
+                                        'before' => '<label class="checkbox-inline">',
+                                        'separator' => '</label><label class="checkbox-inline">',
+                                        'after' => __('Publish') . '</label>'
+                                    ));
+                                    ?>
+                                </div>
                             </div>
                         </div>
                         <?php
