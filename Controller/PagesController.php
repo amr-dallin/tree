@@ -23,26 +23,6 @@ class PagesController extends AppController
             return $this->redirect($this->Auth->redirectUrl());
         }
     }
-    
-    public function about()
-    {
-        
-    }
-    
-    public function idea()
-    {
-        
-    }
-    
-    public function func()
-    {
-        
-    }
-    
-    public function tech()
-    {
-        
-    }
 
     public function admin_dashboard()
     {
