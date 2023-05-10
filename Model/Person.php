@@ -45,14 +45,14 @@ class Person extends AppModel
                     'required' => 'create'
                 )
             ),
-            'birthday' => array(
+            /*'birthday' => array(
                 'validate' => array(
                     'rule' => array('date', 'ymd'),
                     'message' => __('Incorrect date of birth'),
                     'allowEmpty' => true,
                     'required' => false
                 )
-            )
+            )*/
         );
     }
     // The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -120,7 +120,7 @@ class Person extends AppModel
             !empty($this->data[$this->alias]['birthday']) &&
             !empty(CakeTime::format($this->data[$this->alias]['birthday'], '%Y-%d-%m'))
         ) {
-            $this->data[$this->alias]['birthday'] = CakeTime::format($this->data[$this->alias]['birthday'], '%Y-%d-%m');
+            $this->data[$this->alias]['birthday'] = CakeTime::format($this->data[$this->alias]['birthday'], '%Y-%m-%d');
         }
 
         return true;

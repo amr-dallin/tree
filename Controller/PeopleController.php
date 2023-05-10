@@ -261,7 +261,7 @@ class PeopleController extends AppController
     }
 
     /**
-     * delete method
+     * admin_delete method
      *
      * @throws NotFoundException
      * @param string $id
@@ -279,6 +279,6 @@ class PeopleController extends AppController
         } else {
             $this->Flash->error(__('The person could not be deleted. Please, try again.'));
         }
-        return $this->redirect(array('action' => 'index'));
+        return $this->redirect(array('action' => 'admin_index'));
     }
 }

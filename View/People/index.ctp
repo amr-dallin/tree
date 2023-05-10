@@ -1,13 +1,6 @@
 <?php
-$this->start('title');
-echo $this->Html->titleForLayout(__('People'));
-$this->end();
-
-$this->start('nav');
-$menu[2] = true;
 echo $this->element('nav', array('menu' => $menu));
 $this->end();
-
 $this->start('css-include');
 echo $this->Html->css(
     array(
@@ -17,18 +10,16 @@ echo $this->Html->css(
     )
 );
 $this->end();
-
 $this->start('jinclude');
 echo $this->Html->script(
     array(
         'jquery-ui-1.10.2.custom.min',
-        '../lib/primitives-5.9.1/min/primitives.min',
-        '../lib/primitives-5.9.1/min/primitives.jquery.min'
+        '../lib/primitives/js/primitives.latest',
+        '../lib/primitives/js/bporgeditor.latest'
     )
 );
 $this->end();
 ?>
-
 <?php $this->start('jscript'); ?>
 <script type="text/javascript">
     
@@ -37,15 +28,13 @@ $this->end();
         ResizePlaceholder();
         
         var options = new primitives.famdiagram.Config();
-
-        var items = <?= $this->Html->people($people) ?>;
+        var items = <?php echo $this->Html->people($people); ?>;
         
         var templates = [];
         templates.push(getContactTemplate());
-
         options.items = items;
         options.defaultTemplateName = "contactTemplate";
-        options.cursorItem = '<?= $this->Session->read('Auth.User.User.person_id') ?>';
+        options.cursorItem = '<?php echo $this->Session->read('Auth.User.User.person_id'); ?>';
         options.linesWidth = 1;
         options.arrowsDirection = 2;
         options.templates = templates;
@@ -61,10 +50,7 @@ $this->end();
         options.navigationMode = 0;
         options.highlightGravityRadius = 40;
         options.enablePanning = true;
-
         $("#tree").famDiagram(options);
-
-        $('[name="scrollPanel"]').css({overflow: "hidden"});
         
         $(window).resize(function () {
             onWindowResize();
@@ -72,12 +58,10 @@ $this->end();
         
         function onTemplateRender(event, data) {
             var itemConfig = data.context;
-
             if (data.templateName == "contactTemplate") {
                 data.element.find("[name=quantity_marks]").attr({"href": itemConfig.quantity_marks_href});
                 data.element.find("[name=short_name]").attr({"href": itemConfig.short_name_href});
                 data.element.find("[name=avatar]").attr({"src": itemConfig.avatar});
-
                 var fields = ["short_name", "quantity_marks"];
                 for (var index = 0; index < fields.length; index++) {
                     var field = fields[index];
@@ -92,10 +76,8 @@ $this->end();
         function getContactTemplate() {
 			var result = new primitives.orgdiagram.TemplateConfig();
 			result.name = "contactTemplate";
-
 			result.itemSize = new primitives.common.Size(80, 120);
 			result.highlightPadding = new primitives.common.Thickness(2, 2, 2, 2);
-
 			var itemTemplate = $(
                 '<div class="person">' +
                     '<div class="avatar"><img name="avatar" /></div>' +
@@ -107,7 +89,6 @@ $this->end();
                 height: result.itemSize.height + "px"
             }).addClass("bp-item bp-corner-all bt-item-frame");
             result.itemTemplate = itemTemplate.wrap('<div>').parent().html();
-
             return result;
         }
         
@@ -121,10 +102,9 @@ $this->end();
                 }, 300);
             }
         }
-
         function ResizePlaceholder() {
-            var bodyWidth = $(window).width() - 30;
-            var bodyHeight = $(window).height() - 60;
+            var bodyWidth = $(window).width() - 30
+            var bodyHeight = $(window).height() - 60
             $("#tree").css(
             {
                 "width": bodyWidth + "px",
@@ -138,8 +118,6 @@ $this->end();
     
 </script>
 <?php $this->end(); ?>
-
-
 <div class="container-fluid bg-gray-lighter">
     <div id="tree" class="people"></div>
 </div>

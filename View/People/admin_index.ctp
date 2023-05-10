@@ -39,6 +39,7 @@ $(document).ready( function () {
                 <table id="datatable" class="table table-striped table-bordered" width="100%">
                     <thead>
                         <tr>
+                            <th class="text-center" style="background: none; cursor: inherit;"></th>
                             <th data-class="expand" data-priority="1"><?php echo __('Full Name'); ?></th>
                             <th class="text-center"><?php echo __('Gender'); ?></th>
                             <th class="text-center"><?php echo __('Birthday'); ?></th>
@@ -50,6 +51,21 @@ $(document).ready( function () {
                     <tbody>
                     <?php foreach($people as $person): ?>
                         <tr>
+                            <td class="text-center">
+                                <?php
+                                echo $this->Form->postLink(
+                                    $this->Html->tag('i', '', array('class' => 'fa fa-trash')),
+                                    array(
+                                        'action' => 'admin_delete',
+                                        $person['Person']['id']
+                                    ),
+                                    array(
+                                        'escape' => false,
+                                        'confirm' => __('Are you sure you want to delete?')
+                                    )
+                                );
+                                ?>
+                            </td>
                             <td><?php echo $person['Person']['full_name']; ?></td>
                             <td class="text-center">
                             <?php
@@ -64,7 +80,7 @@ $(document).ready( function () {
                             ?>
                             </td>
                             <td class="text-center">
-                            <?php echo $this->Html->dateFormat('d:m:Y', $person['Person']['birthday']); ?>
+                            <?php echo $this->Html->dateFormat('d.m.Y', $person['Person']['birthday']); ?>
                             </td>
                             <td class="text-center"><?php echo count($person['Mark']); ?></td>
                             <td class="text-center">
@@ -88,13 +104,13 @@ $(document).ready( function () {
                             ?>
                             </td>
                             <td class="text-center">
-                            <?php
-                            echo $this->Html->link(
-                                $this->Html->tag('i', '', array('class' => 'fa fa-pencil')),
-                                array('action' => 'edit', $person['Person']['id'], 'admin' => true),
-                                array('escape' => false)
-                            );
-                            ?>
+                                <?php
+                                echo $this->Html->link(
+                                    $this->Html->tag('i', '', array('class' => 'fa fa-pencil')),
+                                    array('action' => 'edit', $person['Person']['id'], 'admin' => true),
+                                    array('escape' => false)
+                                );
+                                ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

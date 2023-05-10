@@ -381,7 +381,11 @@ class Item extends AppModel
         
         $items = '';
         if (!empty($marks)) {
-            $conditions = array('Item.id' => $marks);
+            $conditions = array(
+                'Item.id' => $marks,
+                'Item.verification' => true,
+                'Item.publish' => true
+            );
             $order = "FIELD(Item.id," . implode(',', $marks). ")";
             $items = $this->getItems($conditions, $offset, $order);
         }

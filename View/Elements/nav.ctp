@@ -19,7 +19,7 @@
             </button>
             <?php
             echo $this->Html->link(
-                __('Family') . ' <sup><span class="label label-warning">beta</span></sup>',
+                __('Family'),
                 array(
                     'controller' => 'items',
                     'action' => 'index',
